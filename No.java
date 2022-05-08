@@ -1,12 +1,18 @@
+
+class Element {
+    public int valor;
+    public int frequencia;
+}
+
 class No {
-    public int elemento; // Conteudo do no.
-    public No esq, dir;  // Filhos da esq e dir.
+    public Element elemento; 
+    public No esq, dir;  
 
     /**
      * Construtor da classe.
      * @param elemento Conteudo do no.
      */
-    public No(int elemento) {
+    public No(Element elemento) {
         this(elemento, null, null);
     }
 
@@ -16,7 +22,7 @@ class No {
      * @param esq No da esquerda.
      * @param dir No da direita.
      */
-    public No(int elemento, No esq, No dir) {
+    public No(Element elemento, No esq, No dir) {
         this.elemento = elemento;
         this.esq = esq;
         this.dir = dir;
