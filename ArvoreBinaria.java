@@ -39,7 +39,7 @@ public class ArvoreBinaria {
    private void caminharCentral(No i) {
       if (i != null) {
          caminharCentral(i.esq); // Elementos da esquerda.
-         System.out.print(i.elemento + " "); // Conteudo do no.
+         System.out.print(i.elemento.valor + "-" + i.elemento.frequencia + " "); // Conteudo do no.
          caminharCentral(i.dir); // Elementos da direita.
       }
    }
@@ -52,7 +52,7 @@ public class ArvoreBinaria {
 
    private void caminharPre(No i) {
       if (i != null) {
-         System.out.print(i.elemento + " "); // Conteudo do no.
+         System.out.print(i.elemento.valor + "-" + i.elemento.frequencia + " "); // Conteudo do no.
          caminharPre(i.esq); // Elementos da esquerda.
          caminharPre(i.dir); // Elementos da direita.
       }
@@ -68,7 +68,7 @@ public class ArvoreBinaria {
       if (i != null) {
          caminharPos(i.esq); // Elementos da esquerda.
          caminharPos(i.dir); // Elementos da direita.
-         System.out.print(i.elemento + " "); // Conteudo do no.
+         System.out.print(i.elemento.valor + "-" + i.elemento.frequencia + " "); // Conteudo do no.
       }
    }
 
@@ -79,7 +79,7 @@ public class ArvoreBinaria {
    private No inserir(Element x, No i) throws Exception {
       if (i == null) {
          i = new No(x);
-         // Inserir pela frequencia e desempatar pelor valor
+         // Inserir pela frequencia
       } else if (i.elemento.compareTo(x) == 1) {
          i.esq = inserir(x, i.esq);
 
