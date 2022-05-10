@@ -1,5 +1,5 @@
 
-class Element implements Comparable {
+class Element implements Comparable<Element> {
     public int valor;
     public int frequencia;
 
@@ -9,9 +9,8 @@ class Element implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        // TODO Auto-generated method stub
-        return 0;
+    public int compareTo(Element elemento) {
+        return this.frequencia > elemento.frequencia ? 1 : -1;
     }
 
     public int getValor() {
