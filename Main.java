@@ -1,3 +1,8 @@
+/**
+ * Lista 4 - Árvore de Busca Ótima
+ * Alunos: Isabela Regina Aguilar
+ * Lucas Milard de Souza Freitas
+ */
 
 public class Main {
 
